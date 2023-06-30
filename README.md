@@ -78,6 +78,33 @@ Estimated Total Size (MB): 5.38
 ----------------------------------------------------------------
 ```
 
+## Image Transformations
+```
+import albumentations as A
+from albumentations.pytorch import ToTensorV2
+
+transform = A.Compose([
+    A.HorizontalFlip(p=0.5),
+    A.ShiftScaleRotate(
+       shift_limit=0.0625, scale_limit=0.1, 
+        rotate_limit=45, interpolation=1, 
+        border_mode=4, p=0.5
+    ),
+    A.CoarseDropout(
+        max_holes=8, max_height=8, 
+        max_width=8, p=0.5
+    ),
+    A.RandomBrightnessContrast(p=0.2),
+    A.ToGray(p=0.1),
+    A.Normalize(
+        mean=(0.491, 0.482, 0.447), 
+        std=(0.247, 0.243, 0.262),
+        always_apply=True
+    ),
+    ToTensorV2(),
+])
+```
+
 ## Target to be Achieved 
 - :heavy_check_mark: Write a new network that
 has the architecture to C1C2C3C40 (No MaxPooling, but 3 convolutions, where the last one has a stride of 2 instead) (If you can figure out how to use Dilated kernels here instead of MP or strided convolution, then 200pts extra!)
