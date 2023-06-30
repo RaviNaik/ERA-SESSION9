@@ -76,9 +76,9 @@ Estimated Total Size (MB): 5.38
 ```
 
 ## Target to be Achieved 
- - :heavy_check_mark: Write a new network that
+- :heavy_check_mark: Write a new network that
 has the architecture to C1C2C3C40 (No MaxPooling, but 3 convolutions, where the last one has a stride of 2 instead) (If you can figure out how to use Dilated kernels here instead of MP or strided convolution, then 200pts extra!)
- - :heavy_check_mark: total RF must be more than 44
+- :heavy_check_mark: total RF must be more than 44
  - :heavy_check_mark: one of the layers must use Depthwise Separable Convolution
 :heavy_check_mark: one of the layers must use Dilated Convolution
 :heavy_check_mark: use GAP (compulsory):- add FC after GAP to target #of classes (optional)
