@@ -4,7 +4,7 @@
 ![image](https://github.com/RaviNaik/ERA-SESSION9/assets/23289802/3a000860-5047-48da-8857-7c05cd56cfc8)
 
 ## Model Summary
-```
+```python3
 ----------------------------------------------------------------
         Layer (type)               Output Shape         Param #
 ================================================================
@@ -79,7 +79,7 @@ Estimated Total Size (MB): 5.38
 ```
 
 ## Image Transformations
-```
+```python3
 import albumentations as A
 from albumentations.pytorch import ToTensorV2
 
@@ -121,7 +121,7 @@ has the architecture to C1C2C3C40 (No MaxPooling, but 3 convolutions, where the 
 - :heavy_check_mark: upload to Github
 
 ## Training Log
-```
+```python3
 [EPOCH 0 / 500] -- 
 Loss=1.3207123279571533 Batch_id=390 Accuracy=35.30: 100%|██████████| 391/391 [00:05<00:00, 77.30it/s]
 
